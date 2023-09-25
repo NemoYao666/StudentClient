@@ -1,0 +1,90 @@
+#right_nav {
+    position: fixed;
+    bottom: 250px;
+    right: -125px;
+    display: inline-block;
+
+}
+
+#right_nav ul {
+    list-style-type: none;
+}
+
+#right_nav button {
+    background: url(../imgs/i-q21-1.png) no-repeat 40px 0px;
+    margin-top: -10px;
+    height: 40px;
+    width: 90px;
+    cursor: pointer;
+    line-height: 40px;
+    background-size: 40px;
+    border: none;
+}
+
+#right_nav ul li {
+    background-color: rgba(2, 70, 143, 0.7);
+    margin-top: 1px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#right_nav ul li a {
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+#li1 {
+    background: url(../imgs/i-q11-1.png) no-repeat 5px 0px;
+    background-size: 40px;
+    padding-left: 50px;
+}
+
+#li2 {
+    background: url(../imgs/i-q12-1.png) no-repeat 5px 0px;
+    background-size: 40px;
+    padding-left: 50px;
+}
+
+#li3 {
+    background: url(../imgs/i-q13-1.png) no-repeat 5px 0px;
+    background-size: 40px;
+    padding-left: 50px;
+}
+
+#li4 {
+    background: url(../imgs/i-q14-1.png) no-repeat 5px 0px;
+    background-size: 40px;
+    padding-left: 50px;
+}
+
+#li5 {
+    background: url(../imgs/i-qyx.png) no-repeat 5px 0px;
+    background-size: 40px;
+    padding-left: 50px;
+}
+
+#li6 {
+    background: url(../imgs/i-qxx.png) no-repeat 5px 0px;
+    background-size: 40px;
+    padding-left: 50px;
+}
+
+#li7 {
+    background: url(../imgs/i-q24-1.png) no-repeat 5px 0px;
+    background-size: 40px;
+    padding-left: 50px;
+}
+
+#right_nav ul li:hover{
+    background-color: rgb(188, 141, 0);
+    margin-left: -125px;
+}
+
+.flat_on{
+    margin-left: -100px;
+}

@@ -1,0 +1,15 @@
+
+#right_back{
+    position: fixed;
+    width: 48px;
+    height: 59px;
+    right: 10px;
+    bottom: 43px;
+    display: none;
+
+    background: url(../imgs/i-q5.png) center center no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    color: #444;
+    cursor: pointer;
+}

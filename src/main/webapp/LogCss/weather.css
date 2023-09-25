@@ -1,0 +1,23 @@
+#weather {
+    position: absolute;
+    left: 250px;
+    top: 150px;
+
+}
+
+iframe {
+    display: block;
+    pointer-events: none
+}
+
+#weather span {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 15px;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 20px;
+    width: 300px;
+}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>主页</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <link href="IndexCss/nav.css" rel="stylesheet">
+    <link href="IndexCss/banner.css" rel="stylesheet">
+    <link href="IndexCss/right_nav.css" rel="stylesheet">
+    <link href="IndexCss/right_back.css" rel="stylesheet">
+    <link href="IndexCss/csu_news.css" rel="stylesheet">
+    <link href="IndexCss/footer.css" rel="stylesheet">
+    <link href="IndexCss/data_csu.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="IndexJs/nav.js"></script>
+    <script type="text/javascript" src="IndexJs/banner.js"></script>
+    <script type="text/javascript" src="IndexJs/right_nav.js"></script>
+    <script type="text/javascript" src="IndexJs/right_back.js"></script>
+    <script type="text/javascript" src="IndexJs/csu_news.js"></script>
+    <script type="text/javascript" src="IndexJs/data_csu.js"></script>
+
+
+</head>
+<body style="padding: 0;margin: 0;min-width: 1420px">
+
+<!--导航栏-->
+<div id="nav">
+
+    <div id="nav-left">
+
+        <div id="nav-up-left">
+            <a href="#">学生</a>
+            <a href="#">教职工</a>
+            <a href="#">未来学生</a>
+            <a href="#">校友校董</a>
+            <a href="#">招聘</a>
+
+        </div>
+
+        <div id="nav-down-left">
+
+            <div class="nav5">
+                <a href="#" class="cont BlueLine">走进中南</a>
+                <div class="nav6">
+
+                    <div style="display: inline-block;line-height: 80px">
+                        <a>学校概况</a>
+                        <a>历史沿革</a>
+                        <a>学校领导</a>
+                        <br>
+                        <a>机构设置</a>
+                        <a>数据中南</a>
+                        <a>学校章程</a>
+                    </div>
+
+                    <div style="display: inline-block;line-height: 80px">
+                        <a><img src="imgs/navpic.jpg"></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <span>
+                <a href="#">教育教学</a>
+            </span>
+
+            <span>
+                <a href="#">学院学科</a>
+            </span>
+
+            <span>
+                <a href="#">师资队伍</a>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div id="logo">
+        <a href="#">
+            <img id="logo_img" src="imgs/logo.png" alt="logo">
+        </a>
+    </div>
+
+    <div id="nav-right">
+
+        <div id="nav-up-right">
+            <a href="#" class="cont">信息门户</a>
+            <a href="#" class="cont">图书馆</a>
+            <div class="nav1">
+                <a href="#" class="cont">教育机构 &nbsp;&nbsp;</a>
+                <div class="nav2">
+                    <a>文学与新闻传播学院</a>
+                    <a>外国语学院</a>
+                    <a>建筑与艺术学院</a>
+                    <a>商学院</a>
+                    <a>法学院</a>
+                    <a>马克思主义学院</a>
+                    <a>公共管理学院</a>
+                    <a>数学与统计学院</a>
+                    <a>物理与电子学院</a>
+                    <a>化学化工学院</a>
+
+                    <div style="width: 100%;float: left">
+                        <a style="width: auto">机电工程学院</a>
+                        <a style="width: auto">(轻合金研究院</a>
+                        <a style="width: auto">航空航天技术研究院)</a>
+                    </div>
+
+                    <a>粉末冶金研究院</a>
+                    <a>交通运输工程学院</a>
+                    <a>土木工程学院</a>
+                    <a>冶金与环境学院</a>
+                    <a>地球科学与信息物理学院</a>
+                    <a>资源与安全工程学院</a>
+                    <a>资源加工与生物工程学院</a>
+                    <a>自动化学院</a>
+                    <a>体育教研部</a>
+                    <a>计算机学院(大数据研究院)</a>
+                    <a>基础医学院</a>
+                    <a>湘雅公共卫生学院</a>
+                    <a>湘雅护理学院</a>
+                    <a>湘雅口腔医学院</a>
+                    <a>湘雅药学院</a>
+                    <a>生命科学学院</a>
+                    <a>邓迪国际学院</a>
+
+                </div>
+            </div>
+
+            <div class="nav1">
+                <a href="#" class="cont">研究机构 &nbsp;&nbsp;</a>
+                <div class="nav2">
+                    <a href="#">box1</a>
+                    <a href="#">box2</a>
+                    <a href="#">box3</a>
+                    <a href="#">box4</a>
+                </div>
+            </div>
+            <a href="#" class="cont">English</a>
+        </div>
+
+        <div id="nav-down-right">
+            <a href="#">科学研究</a>
+            <a href="#">招生就业</a>
+            <a href="#">合作交流</a>
+            <a href="#">学生天地</a>
+        </div>
+
+    </div>
+
+    <div id="logInfo">
+
+        <div>
+            <span>你好,</span>
+        </div>
+
+        <div>
+            <span id="LogName"></span>
+        </div>
+
+        <div>
+            <a id="logout" onclick="logout()">退出登录</a>
+        </div>
+
+    </div>
+
+    <div id="modify_info">
+        <div>
+            <a id="modifyInfo" onclick="window.top.location.href='help.html?type=modifyInfo'">修改信息</a>
+        </div>
+    </div>
+
+</div>
+
+<!--大轮播图-->
+<div id="banner">
+
+    <div class="imgBox" onmouseover="mouse_hover()" onmouseout="mouse_out()">
+        <img id="banner_img" src="imgs/20220923qiufen.jpg">
+    </div>
+
+    <div class="circle">
+        <ul class="cirbox" id="btn_ul">
+            <li onclick="Click_active(0)" class='active'></li>
+            <li onclick="Click_active(1)"></li>
+            <li onclick="Click_active(2)"></li>
+            <li onclick="Click_active(3)"></li>
+        </ul>
+    </div>
+
+</div>
+
+<!--中南要闻-->
+<div id="csu_news">
+    <div id="content">
+        <div id="title">
+            <h3>中南要闻</h3>
+
+            <a href="#"><strong>. . .</strong> 更多</a>
+
+        </div>
+
+        <div id="news_box">
+
+            <div id="news_left">
+
+                <div id="new_box1" style="display: block" class="new_box">
+                    <img id="new_img1" src="imgs/1E7946B4DD6D682F84641B743E6_F16C1C0E_21F7C.jpg">
+                    <div class="new_text">
+                        <h3>个体化诊疗技术国家工程研究中心揭牌</h3>
+                        <span>2022-09-19</span>
+                    </div>
+                </div>
+
+                <div id="new_box2" style="display: none" class="new_box">
+                    <img id="new_img2" src="imgs/0B72A77C46D859CF2F4B77C7A9C_A18C4C4D_25930.jpg">
+                    <div class="new_text">
+                        <h3>中南大学举行2022级新生开学典礼</h3>
+                        <span>2022-09-07</span>
+                    </div>
+                </div>
+
+                <div id="new_box3" style="display: none" class="new_box">
+                    <img id="new_img3" src="imgs/3938BBC3ACAA7905EF69DBFF33C_B849FA49_1FB05.jpg">
+                    <div class="new_text">
+                        <h3>听，这是开学第一天的“声音”</h3>
+                        <span>2022-08-29</span>
+                    </div>
+                </div>
+
+                <div id="new_box4" style="display: none" class="new_box">
+                    <img id="new_img4" src="imgs/E89E68DC4844DEA9904606489F3_CA0D7E19_1AFD1.jpg">
+                    <div class="new_text">
+                        <h3>学校召开校领导班子务虚扩大会暨全校中层干部大会</h3>
+                        <span>2022-08-29</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="news_right">
+                <ul>
+                    <li class="li1">
+                        <a href="#">
+                            <h3>【喜迎二十大】中南大学举行升旗仪式 庆祝中华人民共和国成立73周年</h3>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-10-01
+                            </span>
+                        </a>
+
+                    </li>
+                    <li class="li2">
+                        <a href="#">
+                            <h3>中南大学外籍专家玛丽塔教授荣获中国政府友谊奖</h3>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-10-01
+                            </span>
+                        </a>
+                    </li>
+                    <li class="li3">
+                        <a href="#">
+                            <h3>【喜迎二十大】125对中南伉俪庆钻石（金）婚 诠释爱情的模样</h3>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-9-30
+                            </span>
+                        </a>
+                    </li>
+                    <li class="li4">
+                        <a href="#">
+                            <h3>学校召开学生工作干部座谈会</h3>
+                            <br>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-10-01
+                            </span>
+                        </a>
+                    </li>
+                    <li class="li5">
+                        <a href="#">
+                            <h3>学校召开纪委全委扩大会暨纪检监察工作会议</h3>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-9-30
+                            </span>
+                        </a>
+                    </li>
+                    <li class="li6">
+                        <a href="#">
+                            <h3>【喜迎二十大】中南大学助力江华瑶族长鼓舞推广建设成果展举行</h3>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-9-29
+                            </span>
+                        </a>
+                    </li>
+                    <li class="li7">
+                        <a href="#">
+                            <h3>中南大学四位教授荣获“第十六届詹天佑铁道科学技术奖”</h3>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-9-28
+                            </span>
+                        </a>
+                    </li>
+                    <li class="li8">
+                        <a href="#">
+                            <h3>中南大学张斗教授荣获“中国侨界贡献奖”一等奖</h3>
+                            <span>
+                                <img src="imgs/img5.png">
+                                2022-9-27
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--右侧导航-->
+<div id="right_nav">
+    <ul id="right_nav_ul">
+        <li id="li1"><a href="#">校内通知</a></li>
+        <li id="li2"><a href="#">校内公文</a></li>
+        <li id="li3"><a href="#">每周会议</a></li>
+        <li id="li4"><a href="#">中大信息</a></li>
+        <li id="li5"><a href="#">中南邮箱</a></li>
+        <li id="li6"><a href="#">信息门户</a></li>
+        <li id="li7"><a href="#">办事大厅</a></li>
+    </ul>
+
+    <button id="flat_button" onclick="toFlat()"></button>
+</div>
+
+<!--数据中南-->
+<div id="data_csu">
+
+    <div id="div_h3">
+        <h3><span>数据中南</span></h3>
+    </div>
+
+    <!--    专题网站-->
+    <div id="website">
+        <div>
+            <h3 class="tit">
+                专题网站
+            </h3>
+
+            <div class="web_box">
+
+                <ul>
+<!--                    第一组-->
+                    <li>
+                        <img src="imgs/dsxxjy.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/pic-q5.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/pic-q6.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/20221006ershida.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/pic-q7.jpg">
+                    </li>
+
+                    <li>
+                        <img src="imgs/20211117xxgk20211116144113.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/daxingyiqigongxiangpingtaizhuanti20220315.jpg">
+                    </li>
+
+<!--                    第二组-->
+                    <li>
+                        <img src="imgs/dsxxjy.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/pic-q5.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/pic-q6.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/20221006ershida.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/pic-q7.jpg">
+                    </li>
+
+                    <li>
+                        <img src="imgs/20211117xxgk20211116144113.jpg">
+                    </li>
+                    <li>
+                        <img src="imgs/daxingyiqigongxiangpingtaizhuanti20220315.jpg">
+                    </li>
+
+
+                </ul>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--页脚-->
+<div id="footer">
+    <div id="link">
+        <div class="nav3" id="link1">
+            <a href="#" class="cont2">常用网站 &nbsp;&nbsp;</a>
+            <div class="nav4">
+                <a href="#">校内导航</a>
+                <a href="#">中南新闻网</a>
+                <a href="#">研究生院</a>
+                <a href="#">档案馆</a>
+                <a href="#">采购与招标管理中心</a>
+            </div>
+        </div>
+
+        <div class="nav3" id="link2">
+            <a href="#" class="cont2">常用系统 &nbsp;&nbsp;</a>
+            <div class="nav4">
+                <a href="#">box1</a>
+                <a href="#">box2</a>
+                <a href="#">box3</a>
+                <a href="#">box4</a>
+                <a href="#">box5</a>
+            </div>
+        </div>
+
+        <div class="nav3" id="link3">
+            <a href="#" class="cont2">常用信息 &nbsp;&nbsp;</a>
+            <div class="nav4">
+                <a href="#">box1</a>
+                <a href="#">box2</a>
+                <a href="#">box3</a>
+                <a href="#">box4</a>
+                <a href="#">box5</a>
+            </div>
+        </div>
+
+        <div class="nav3" id="link4">
+            <a href="#" class="cont2">常用链接 &nbsp;&nbsp;</a>
+            <div class="nav4">
+                <a href="#">box1</a>
+                <a href="#">box2</a>
+                <a href="#">box3</a>
+                <a href="#">box4</a>
+                <a href="#">box5</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer2">
+        <div id="logo2">
+            <img src="imgs/fd-txt1.png">
+        </div>
+        <div id="inf">
+            <p>
+                <span>通信地址: 湖南省长沙市麓山南路932号</span>
+                <span>邮政编码: 410083</span>
+            </p>
+
+            <p>
+                <span>校内电话查询: 0731-88876114</span>
+                意见反馈邮箱：
+                <a href="mailto:homepage@csu.edu.cn">homepage@csu.edu.cn</a>
+            </p>
+        </div>
+
+        <div id="contact">
+            <a href="#">
+                <img src="imgs/a1.png">
+                <div class="ma">
+                    <img src="imgs/wb3.jpg">
+                </div>
+            </a>
+
+            <a href="#">
+                <img src="imgs/a2.png">
+                <div class="ma">
+                    <img src="imgs/wb4.jpg">
+                </div>
+            </a>
+
+            <a href="#">
+                <img src="imgs/a3.png">
+                <div class="ma">
+                    <img src="imgs/sjrwm.jpg">
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+</div>
+
+<!--版权信息-->
+<div id="footer3">
+    <P>
+        <span>湘ICP备05005659号-1</span>
+        &nbsp;
+        <span>湘教QS3-200505-00020</span>
+        &nbsp;
+        <span>中南大学版权所有</span>
+    </P>
+</div>
+
+<!--返回顶部-->
+<a id="right_back" onclick="Go_top()"></a>
+
+</body>
+</html>

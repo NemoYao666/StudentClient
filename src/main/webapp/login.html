@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>用户登录</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--    自定义-->
+    <link rel="stylesheet" href="LogCss/logo.css">
+    <link rel="stylesheet" href="LogCss/right.css">
+    <link rel="stylesheet" href="LogCss/weather.css">
+
+</head>
+<body class="container-fluid">
+
+<div id="logo">
+    <img src="LogImgs/logo.png" alt="logo">
+    <span>统一身份认证</span>
+
+</div>
+
+<div id="weather">
+    <!--    插件法-->
+<!--        <iframe width="400" scrolling="no" height="100" frameborder="0" allowtransparency="true"-->
+<!--                src="https://i.tianqi.com?c=code&id=35&color=%23FFFFFF&icon=1&py=changsha">-->
+
+<!--        </iframe>-->
+
+<!--        接口法-->
+    <div>
+        <span id="weather-date"></span>
+        <br>
+        <span id="weather-locate" style="width: 100px"></span>
+        <span id="weather-high_low"></span>
+        <br>
+        <span id="weather-day_type"></span>
+        <br>
+        <span id="weather-night_type"></span>
+    </div>
+
+</div>
+
+<div id="right">
+
+    <div class="wrap">
+
+        <div class="main">
+            <div class="form-head">
+
+                <span id="AccountLogin" class="selected">
+                    <a href="javascript:void(0);" id="AccountLoginA" class="selectedA" onclick="selectForm(0)">账户登录</a>
+                </span>
+
+                <span id="CodeLogin" class="">
+                    <a href="javascript:void(0);" id="CodeLoginA" onclick="selectForm(1)">动态码登录</a>
+                </span>
+
+            </div>
+
+            <form method="post" action="">
+
+                <div class="form-body">
+
+                    <div id="AccountForm" style="display: block">
+                        <div class="username item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="username" name="username" type="text" placeholder="请输入用户名" title="请输入用户名">
+                        </div>
+
+                        <div class="password item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="password" name="password" type="text" placeholder="请输入密码" title="请输入密码">
+                        </div>
+
+                    </div>
+
+                    <div id="CodeForm" style="display: none">
+
+                        <div class="phone_email item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="phone_email" name="phone_email" type="text" placeholder="请输入邮箱"
+                                   title="请输入手机号/邮箱">
+                        </div>
+
+                        <div class="captcha item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/captcha1.png" class="login-icon">
+                            </span>
+                            <input id="captcha" name="captcha" type="text" placeholder="请输入验证码" title="请输入验证码">
+
+                            <span class="captcha-img">
+<!--                                验证码图片-->
+                                <a href="javascript:refreshCode();">
+                                    <img src="user/checkCode" id="captchaImg" alt="点击刷新" title="点击刷新">
+                                </a>
+
+                            </span>
+
+                        </div>
+
+                        <div class="code item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="dynamicCode" name="dynamicCode" type="text" placeholder="请输入邮箱动态码"
+                                   title="请输入邮箱动态码">
+                            <a class="get-code" href="javascript:void(0);" onclick="checkCaptchaAndSendEmail()">
+                                <em class="getCodeText">获取动态码</em>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div id="form-tip">
+                    <span id="show_error"></span>
+                    <span id="show_warn"></span>
+                </div>
+
+                <div class="log_btn_div">
+                    <a id="login_btn" href="javascript:void(0);" class="login_btn" onclick="login()">登录</a>
+                </div>
+
+                <div class="form-help">
+                    <a class="help-left" onclick="window.top.location.href='help.html?type=forgetPassword'">忘记密码</a>
+                    <a class="help-right" onclick="window.top.location.href='help.html?type=modifyPassword'">修改密码</a>
+                </div>
+
+                <div class="form-help">
+                    <a class="help-left" onclick="window.top.location.href='help.html?type=registerAccount'">注册账号</a>
+                    <a class="help-right"  onclick="window.top.location.href='help.html?type=cancelAccount'">注销账号</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="LogJs/weather.js"></script>
+<script src="LogJs/right.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+#banner{
+    height: auto;
+    padding-top: 90px;
+}
+
+.imgBox img{
+    width: 100%;
+    position: center;
+}
+
+/* 底部 */
+.circle{
+    position: absolute;
+    bottom: 130px;
+    width:100%;
+    text-align: center;
+    height: 14px;
+}
+
+.circle .cirbox{
+    display: inline-block;
+    border-radius: 0;
+    font-size: 0;   /*不加这一句，会使li在ul中向下偏移*/
+}
+
+.circle .cirbox li{
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    border-radius: 0;
+    background: #fff;
+    cursor: pointer;
+    margin: 5px;
+}
+.circle .cirbox .active{
+    background: #ff9900;
+}
+
+/*轮播图切换过渡，淡入淡出*/
+.disappear{
+    animation: moveA 2s ease-out;
+}
+@keyframes moveA {
+    0% {
+        opacity: 1;
+    }
+
+    20%{
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.appear{
+    animation: moveB 2s ease-out;
+}
+@keyframes moveB {
+    0% {
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+

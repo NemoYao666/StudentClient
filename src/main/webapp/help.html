@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>用户登录</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--    自定义-->
+    <link rel="stylesheet" href="LogCss/logo.css">
+    <link rel="stylesheet" href="LogCss/right.css">
+    <link rel="stylesheet" href="LogCss/weather.css">
+    <link rel="stylesheet" href="LogCss/help.css">
+
+    <style>
+        .switch{
+            width: 150px;
+            border: none !important;
+            height: 28px !important;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .switch_list{
+            text-align: center;
+            width: 100px;
+            padding: 5px 14px;
+            background: #ffffff;
+            border-radius: 4px;
+        }
+
+
+    </style>
+
+
+</head>
+<body class="container-fluid">
+
+<div id="logo">
+    <img src="LogImgs/logo.png" alt="logo">
+    <span>统一身份认证</span>
+
+</div>
+
+<div id="weather">
+    <!--    插件法-->
+<!--        <iframe width="400" scrolling="no" height="100" frameborder="0" allowtransparency="true"-->
+<!--                src="https://i.tianqi.com?c=code&id=35&color=%23FFFFFF&icon=1&py=changsha">-->
+
+<!--        </iframe>-->
+
+<!--        接口法-->
+    <div>
+        <span id="weather-date"></span>
+        <br>
+        <span id="weather-locate" style="width: 100px"></span>
+        <span id="weather-high_low"></span>
+        <br>
+        <span id="weather-day_type"></span>
+        <br>
+        <span id="weather-night_type"></span>
+    </div>
+
+</div>
+
+<div id="right">
+
+    <div class="wrap">
+
+        <div class="main">
+            <div class="form-head">
+
+                <span id="AccountLogin" class="selected" style="width: 100%">
+                    <a href="javascript:void(0);" id="AccountLoginA" class="selectedA"></a>
+                </span>
+
+            </div>
+
+            <form method="post" action="">
+
+                <div class="form-body">
+
+<!--                    忘记密码表单-->
+                    <div id="forgetPassword_Form" style="display: none">
+
+                        <div class="phone_email item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="forgetPassword_email" name="forgetPassword_email" type="text" placeholder="请输入邮箱"
+                                   title="请输入邮箱">
+                        </div>
+
+                        <div class="captcha item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/captcha1.png" class="login-icon">
+                            </span>
+                            <input id="forgetPassword_captcha" name="forgetPassword_captcha" type="text" placeholder="请输入验证码" title="请输入验证码">
+
+                            <span class="captcha-img">
+<!--                                验证码图片-->
+                                <a href="javascript:refreshCode_forgetPassword();">
+                                    <img src="user/checkCode" id="forgetPassword_captchaImg" alt="点击刷新" title="点击刷新">
+                                </a>
+
+                            </span>
+
+                        </div>
+
+                        <div class="code item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="forgetPassword_dynamicCode" name="forgetPassword_dynamicCode" type="text" placeholder="请输入邮箱动态码"
+                                   title="请输入邮箱动态码" style="width: 55%">
+                            <a class="get-code" href="javascript:void(0);" onclick="checkCaptchaAndSendEmail_forgetPassword()">
+                                <em class="getCodeText">获取动态码</em>
+                            </a>
+                        </div>
+
+                        <div class="password item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="forgetPassword_password" name="forgetPassword_password" type="text" placeholder="请输入新密码" title="请输入新密码">
+                        </div>
+
+
+                    </div>
+
+<!--                    注册表单1-->
+                    <div id="register_Form1" style="display: none">
+
+<!--                        用户名-->
+                        <div class="username item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="register_username" name="register_username" type="text" placeholder="请输入用户名" title="请输入用户名">
+                        </div>
+
+<!--                        密码-->
+                        <div class="password item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="register_password" name="register_password" type="text" placeholder="请输入密码" title="请输入密码">
+                        </div>
+
+<!--                        性别-->
+                        <div class="switch item">
+                            <label for="gender">性别</label>
+                            <select id="gender" class="switch_list">
+                                <option value="男" selected="selected">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+
+<!--                        年龄-->
+                        <div class="switch item">
+                            <label for="age">年龄</label>
+                            <select id="age" class="switch_list">
+                                <option value="10" selected="selected">10</option>
+                                <option value="11">11</option>
+                            </select>
+                        </div>
+
+<!--                        手机号-->
+                        <div class="username item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="register_phone" name="register_phone" type="text" placeholder="请输入手机号" title="请输入手机号">
+                        </div>
+
+                    </div>
+
+<!--                    前面注册表单信息验证通过后再跳转-->
+                    <div id="register_Form2" style="display: none">
+
+                        <!--邮箱-->
+                        <div class="phone_email item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="register_email" name="register_email" type="text" placeholder="请输入邮箱"
+                                   title="请输入邮箱">
+                        </div>
+
+                        <!--                        验证码-->
+                        <div class="captcha item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/captcha1.png" class="login-icon">
+                            </span>
+                            <input id="register_captcha" name="register_captcha" type="text" placeholder="请输入验证码" title="请输入验证码">
+
+                            <span class="captcha-img" style="top: 160px">
+<!--                                验证码图片-->
+                                <a href="javascript:refreshCode_register();">
+                                    <img src="user/checkCode" id="register_captchaImg" alt="点击刷新" title="点击刷新">
+                                </a>
+
+                            </span>
+
+                        </div>
+
+                        <!--                        邮箱动态码-->
+                        <div class="code item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="register_dynamicCode" name="register_dynamicCode" type="text" placeholder="请输入邮箱动态码"
+                                   title="请输入邮箱动态码" style="width: 55%">
+                            <a class="get-code" href="javascript:void(0);" onclick="checkCaptchaAndSendEmail_register()">
+                                <em class="getCodeText">获取动态码</em>
+                            </a>
+                        </div>
+
+                    </div>
+
+<!--                    注销/删除 账户-->
+                    <div id="delete_Form" style="display: none">
+
+                        <div class="phone_email item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="delete_email" name="delete_email" type="text" placeholder="请输入邮箱"
+                                   title="请输入手机号/邮箱">
+                        </div>
+
+                        <div class="captcha item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/captcha1.png" class="login-icon">
+                            </span>
+                            <input id="delete_captcha" name="delete_captcha" type="text" placeholder="请输入验证码" title="请输入验证码">
+
+                            <span class="captcha-img">
+<!--                                验证码图片-->
+                                <a href="javascript:refreshCode_delete();">
+                                    <img src="user/checkCode" id="delete_captchaImg" alt="点击刷新" title="点击刷新">
+                                </a>
+
+                            </span>
+
+                        </div>
+
+                        <div class="code item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="delete_dynamicCode" name="delete_dynamicCode" type="text" placeholder="请输入邮箱动态码"
+                                   title="请输入邮箱动态码" style="width: 55%;">
+                            <a class="get-code" href="javascript:void(0);" onclick="checkCaptchaAndSendEmail_delete()">
+                                <em class="getCodeText">获取动态码</em>
+                            </a>
+                        </div>
+
+                    </div>
+
+<!--                    要先登陆，修改信息-->
+                    <div id="info_Form" style="display: none">
+                        <div class="username item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="info_username" name="info_username" type="text" placeholder="请输入修改后的用户名" title="请输入修改后的用户名">
+                        </div>
+
+                        <div class="switch item">
+                            <label for="info_gender">性别</label>
+                            <select id="info_gender" class="switch_list">
+                                <option value="男" selected="selected">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+
+                        <div class="switch item">
+                            <label for="info_age">年龄</label>
+                            <select id="info_age" class="switch_list">
+                                <option value="10" selected="selected">10</option>
+                                <option value="11">11</option>
+                            </select>
+                        </div>
+
+                        <div class="username item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="info_phone" name="info_phone" type="text" placeholder="请输入修改后的手机号" title="请输入修改后的手机号">
+                        </div>
+
+
+
+                    </div>
+
+                    <div id="AccountForm" style="display: none">
+                        <div class="username item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="username" name="username" type="text" placeholder="请输入用户名" title="请输入用户名">
+                        </div>
+
+                        <div class="password item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="password" name="password" type="text" placeholder="请输入密码" title="请输入密码">
+                        </div>
+
+                    </div>
+
+                    <div id="CodeForm" style="display: none">
+
+                        <div class="phone_email item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/user1.png" class="login-icon">
+                            </span>
+                            <input id="phone_email" name="phone_email" type="text" placeholder="请输入手机号/邮箱"
+                                   title="请输入手机号/邮箱">
+                        </div>
+
+                        <div class="captcha item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/captcha1.png" class="login-icon">
+                            </span>
+                            <input id="captcha" name="captcha" type="text" placeholder="请输入验证码" title="请输入验证码">
+
+                            <span class="captcha-img">
+<!--                                验证码图片-->
+                                <a href="javascript:refreshCode();">
+                                    <img src="user/checkCode" id="captchaImg" alt="点击刷新" title="点击刷新">
+                                </a>
+
+                            </span>
+
+                        </div>
+
+                        <div class="code item">
+                            <span class="prex-icon">
+                                <img src="LogImgs/pass1.png" class="login-icon">
+                            </span>
+                            <input id="dynamicCode" name="dynamicCode" type="text" placeholder="请输入邮箱动态码"
+                                   title="请输入邮箱动态码">
+                            <a class="get-code" href="javascript:void(0);" onclick="checkCaptchaAndSendEmail()">
+                                <em class="getCodeText">获取动态码</em>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div id="form-tip">
+                    <span id="show_error"></span>
+                    <span id="show_warn"></span>
+                </div>
+
+                <div class="log_btn_div">
+                    <a id="submit_btn" href="javascript:void(0);" class="login_btn"
+                       style="width: 40%;display: inline-block;margin-left: 20px;padding-left:10px "
+                    onclick="confirm_help()">提交</a>
+                    <a id="cancel_btn" href="javascript:void(0);" class="login_btn"
+                       style="width: 40%;display: inline-block;margin-left: 30px;padding-left: 10px"
+                    onclick="window.top.location.href='login.html'">返回</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="LogJs/weather.js"></script>
+<script src="LogJs/right.js"></script>
+<script src="LogJs/help.js"></script>
+
+</body>
+</html>

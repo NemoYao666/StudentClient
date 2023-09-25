@@ -1,0 +1,19 @@
+
+.form-body .item{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e8e8e8;
+    border-radius: 4px;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.get-code{
+    text-decoration: none;
+    background: none;
+    color: #2B6CDB;
+    margin-top: 6px;
+    cursor: pointer;
+    position:relative;
+    top: 5px;
+}

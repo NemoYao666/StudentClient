@@ -1,0 +1,312 @@
+
+/*导航*/
+#nav{
+    position: fixed;
+    background-image: url(../imgs/hd-bg1.jpg);
+    width: 100%;
+    height: 90px;
+    background-position: center;
+    transition: height 0.5s;
+    z-index: 10;
+}
+
+#nav-left{
+    margin-top: 8px;
+    width: 550px;
+    display: inline-block;
+}
+
+#nav-right{
+    margin-left: 180px;
+    margin-top: 8px;
+    width: 420px;
+    display: inline-block;
+}
+
+#nav-up-left{
+    margin-left:145px;
+    display: inline-block;
+}
+
+#nav-up-left a{
+    font-size: 9px;
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#nav-up-right{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#nav-up-right a{
+    font-size: 9px;
+    margin-right: 23px;
+    text-decoration: none;
+}
+
+.cont{
+    color: white;
+}
+
+.nav1 {
+    position: relative;/* 设置相对定位 */
+    display: inline-block;/* 让元素具有块级元素和行内元素的特性,即将块级元素转化为内联元素 */
+}
+
+.nav1>a{
+    background-image: url(../imgs/i-down1.png);
+    background-repeat:no-repeat;
+    background-position:right;
+}
+
+.nav2 {
+    display: none;
+
+    position: absolute;/* 绝对定位 */
+    right: 10px;
+    top: 30px;
+    background-color: #f9f9f9;
+    min-width: 400px;/* 最小宽度 */
+    padding: 21px 15px 21px 15px;
+    border-top: solid 3px #ff9900;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.nav2 a {
+    cursor: pointer;
+    /*提升优先级，字体会被继承*/
+    font-size: 14px !important;
+    color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 5px;
+    display: block;/* 将a标签设置为块级标签 */
+    float: left;
+    width: 40%;
+}
+
+.nav2 a:hover {
+    color: #02468f;
+}/* 鼠标悬浮时的颜色 */
+
+.nav1:hover .nav2 {
+    display: block;
+    animation: move 0.3s ease-in 0s;
+}/* 鼠标悬浮在元素上时,变为块级标签 */
+
+.nav2:hover{
+    display: block;
+}
+
+.nav5 {
+    position: relative;/* 设置相对定位 */
+    display: inline-block;/* 让元素具有块级元素和行内元素的特性,即将块级元素转化为内联元素 */
+}
+
+.BlueLine:before{
+    display: block;
+    content: '';
+    width: 0px;
+    height: 0px;
+    top: 25px;
+    margin: 0 auto;
+    transition: .3s;
+    background-color: #0099ff;
+    position: absolute;
+}
+
+.BlueLine:after{
+    display: block;
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    margin: 0 auto;
+    transition: .3s;
+    background-color: #0099ff;
+}
+
+.nav5:hover .BlueLine:before{
+    left: -10px;
+    width: 90px !important;
+    height: 4px !important;
+    background-color: #0099ff;
+}
+
+.nav5:hover .BlueLine:after{
+    height: 25px !important;
+    width: 4px !important;
+    background-color: #0099ff;
+}
+
+.nav6 {
+    display: none;
+    background: url("../imgs/navbg2.jpg") no-repeat;
+    position: absolute;/* 绝对定位 */
+    left: 10px;
+    top: 50px;
+    min-width: 700px;/* 最小宽度 */
+    padding: 21px 15px 21px 15px;
+    border-top: solid 3px #0099ff;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.nav6 a {
+    cursor: pointer;
+    /*提升优先级，字体会被继承*/
+    font-size: 16px !important;
+    color: black !important;
+
+    line-height: 2.88em;
+    text-align: center;
+    vertical-align: center;
+    padding-left: 20px;
+    padding-right: 60px;
+    overflow: hidden;
+
+}
+
+.nav6 a:hover {
+    color: #02468f !important;
+}/* 鼠标悬浮时的颜色 */
+
+.nav5:hover .nav6 {
+    display: block;
+    animation: move 0.3s ease-in 0s;
+}/* 鼠标悬浮在元素上时,变为块级标签 */
+
+
+/* 设置动画参数 */
+@keyframes move {
+    0% {
+        height: 0px;
+        /* transform: translateY(0px); */
+    }
+    100% {
+        height: 100px;
+        /* transform: translateY(1px); */
+    }
+}
+
+#nav-down-left{
+    margin-top: 12px;
+    margin-left: 130px;
+    display: inline-block;
+}
+
+#nav-down-right{
+    margin-top: 12px;
+    display: inline-block;
+}
+
+#nav-down-left a{
+    font-size: 16px;
+    color: white;
+    margin-right: 35px;
+    text-decoration: none;
+}
+
+#nav5{
+    position: relative;/* 设置相对定位 */
+}
+
+#nav6{
+    display: block;
+    position: absolute;/* 绝对定位 */
+    right: 10px;
+    top: 30px;
+    background-color: #f9f9f9;
+    min-width: 420px;/* 最小宽度 */
+    padding: 21px 15px 21px 15px;
+    border-top: solid 3px #ff9900;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#nav-down-right a{
+    font-size: 16px;
+    color: white;
+    margin-right: 35px;
+    text-decoration: none;
+}
+
+#logo{
+    margin-left: 50px;
+    width: 200px;
+    display: inline-block;
+}
+
+#logo a img{
+    margin-bottom: -130px;
+    width: 270px;
+    position: center;
+    display: inline-block;
+    opacity: 1!important;
+}
+
+/*页面滑动*/
+.scrolled_nav{
+    height: 75px !important;
+    transition: height 0.5s;
+}
+
+.scrolled_img{
+    content: url(../imgs/logo-1.png);
+    margin-bottom: -90px !important;
+    margin-left: 35px !important;
+    width: 190px !important;
+    position: center;
+    display: inline-block;
+}
+
+
+#logInfo{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+#logInfo span{
+    color: white;
+}
+
+#logout{
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+
+#logout:hover{
+    color: #2e6da4;
+}
+
+#modify_info{
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+}
+
+#modifyInfo{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+#modifyInfo:hover{
+    color: #2e6da4;
+}
+
+
+
+
+

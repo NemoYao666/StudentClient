@@ -1,0 +1,196 @@
+#right{
+    margin: 0;
+    background: rgba(0,0,0,0.3);
+    height: 100%;
+    width: 600px;
+    position: absolute;
+    right: 0;
+}
+
+.wrap {
+    width: 416px;
+    min-height: 300px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 4px;
+    margin: 20% auto 0;
+}
+
+.main {
+    width: calc(100% - 20px);
+    min-height: 450px;
+    padding: 22px 38px;
+}
+
+.form-head{
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    font-size: 12px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.form-head span{
+    width: 50%;
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 20px;
+    padding: 8px 0;
+}
+
+.form-head span a{
+    color: #34363E;
+    text-decoration: none;
+}
+
+.selected{
+    border-bottom: 1px solid #2B6CDB;
+}
+
+.selectedA{
+    color: #2B6CDB !important;
+}
+
+#form-body{
+    margin-top: 10px;
+}
+
+#AccountForm .item{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e8e8e8;
+    border-radius: 4px;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.form-body .prex-icon{
+    position: relative;
+    left: 5px;
+}
+
+.form-body input{
+    border-left: #e8e8e8 1px solid;
+    width: 70%;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+
+    height: 48px;
+    margin-left: 5px;
+    outline: none;
+}
+
+#form-tip{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #f00b41;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 16px;
+}
+
+.log_btn_div{
+    margin-top: 10px;
+}
+
+.login_btn{
+    width: 100%;
+    height: 50px;
+    background: #2368de;
+    border-radius: 4px;
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    text-decoration: none !important;
+    letter-spacing: 12px;
+}
+
+.login_btn:hover{
+    color: white;
+}
+
+.login_btn:visited{
+    color: white;
+}
+
+.login_btn:active{
+    color: white;
+}
+
+.login_btn:link{
+    color: white;
+}
+
+.form-help{
+    position: relative;
+    clear: both;
+    margin-top: 12px;
+    height: 26px;
+}
+
+.help-left{
+    text-decoration: none !important;
+    font-size: 14px;
+    line-height: 26px;
+    color: #73757E;
+    float: left;
+}
+
+.help-right{
+    text-decoration: none !important;
+    font-size: 14px;
+    line-height: 26px;
+    color: #0c4af9;
+    float: right;
+}
+
+#CodeForm .item{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e8e8e8;
+    border-radius: 4px;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.get-code{
+    text-decoration: none;
+    background: none;
+    color: #2B6CDB;
+    padding: 6px 8px;
+    margin-top: 6px;
+    cursor: pointer;
+    position:relative;
+    top: 5px;
+}
+
+#dynamicCode{
+    width: 50% !important;
+}
+
+.captcha-img{
+    position: absolute;
+    right: 60px;
+    top: 160px;
+    cursor: pointer;
+    text-align: center;
+    width: 86px;
+    height: 30px;
+}
+
+#captchaImg{
+    height: 30px;
+}
+
+.form-help a{
+    cursor: pointer !important;
+}

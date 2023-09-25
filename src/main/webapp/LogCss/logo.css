@@ -1,0 +1,37 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background: url(../LogImgs/bg.png) no-repeat center;
+    height: 100%;
+
+}
+
+#logo{
+    position: absolute;
+    left: 170px;
+    top: 50px;
+}
+
+#logo img{
+    position: relative;
+    width: 246px;
+
+}
+
+#logo span{
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #fff;
+    color: #fff;
+    font-size: 24px;
+    width: 200px;
+}

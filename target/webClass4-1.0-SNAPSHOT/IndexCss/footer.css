@@ -1,0 +1,168 @@
+#footer{
+    padding-left: 150px;
+    padding-right: 150px;
+    background: url(../imgs/fd-bg1.png) center center no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+#link{
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #3d69a4;
+    position: relative;
+    display: block;
+}
+
+.nav3 {
+    line-height: 50px;
+    margin: 0px 33px;
+    position: relative;/* 设置相对定位 */
+    display: inline-block;/* 让元素具有块级元素和行内元素的特性,即将块级元素转化为内联元素 */
+}
+
+.nav3>a{
+    color: white;
+    text-decoration: none;
+    background-image: url(../imgs/i-down1.png);
+    background-repeat:no-repeat;
+    background-position:right;
+    font-size: 16px !important;
+    line-height: 30px;
+}
+
+.nav4 {
+    display: none;/* 将某元素隐藏起来 */
+    position: absolute;/* 绝对定位 */
+    bottom: 50px;
+    background-color: #f9f9f9;
+    min-width: 170px;/* 最小宽度 */
+}
+
+.nav4 a {
+    line-height: 34px;
+    display: block;
+    color: #343434;
+    text-align: left;
+    text-decoration: none;
+    /*提升优先级，字体会被继承*/
+    font-size: 14px !important;
+    padding: 12px 16px;
+}
+
+.nav4 a:hover {
+    color: #02468f;
+}/* 鼠标悬浮时的颜色 */
+
+.nav3:hover .nav4 {
+    display: block;
+    overflow: hidden;
+    animation: move 0.5s ease-in 0s;
+
+}/* 鼠标悬浮在元素上时,变为块级标签 */
+
+#link1{
+    background-image: url(../imgs/i-q17.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 30px;
+}
+
+#link2{
+    background-image: url(../imgs/i-q18.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 30px;
+}
+
+#link3{
+    background-image: url(../imgs/i-q19.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 30px;
+}
+
+#link4{
+    background-image: url(../imgs/i-q20.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 30px;
+}
+
+.cont2{
+    color: white;
+
+}
+
+#footer2{
+    padding-bottom: 20px;
+}
+
+#footer2 div{
+    display: inline-block;
+}
+
+#logo2 img{
+    width: 90%;
+    height: auto;
+}
+
+#inf{
+    font-size: 14px;
+    color: #deebf8;
+    line-height: 2.58em;
+    overflow: hidden;
+    margin-right: 22px;
+}
+
+#inf a{
+    color: #deebf8;
+    text-decoration: none;
+}
+
+#contact{
+    float: right;
+    margin-top: 20px;
+}
+
+#contact a{
+    position: relative;
+    display: block;
+    float: left;
+    width: 49px;
+    height: 49px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.ma{
+    position: relative;
+    padding:10px;
+    bottom: 170px;
+    right: 35px;
+}
+
+.ma img{
+    display: none;
+    width: 100px;
+}
+
+#contact a:hover .ma img{
+    display: block;
+}
+
+#footer3{
+    height: 40px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    text-align: center;
+    vertical-align: center;
+    background-color: #002e61;
+    font-size: 14px;
+    color: #80a0c2;
+}
+
+#footer3 span{
+    margin-left: 5px;
+    margin-right: 5px;
+}
